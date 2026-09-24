@@ -1112,7 +1112,7 @@ function initDownloadCV() {
 
   btn.addEventListener('click', () => {
     const p = appData.profile;
-    const text = `CURRICULUM VITAE - ${p.name.toUpperCase()}
+    const text = `CV - ${p.name.toUpperCase()}
 ============================================================
 Role: ${p.role}
 School: ${p.school}
@@ -1133,7 +1133,7 @@ FEATURED PROJECTS:
 ${appData.projects.map(pr => `* ${pr.title} [${pr.category}] - ${pr.description}`).join('\n')}
 
 ============================================================
-Generated from LocalStorage CMS • 100% Native Web Standards.`;
+.`;
 
     const blob = new Blob([text], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
